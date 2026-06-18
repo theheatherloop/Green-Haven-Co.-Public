@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280">
+    <title>Green Haven Co. | Home Goods Shop</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JavaScript file uses defer to prevent page load errors -->
+    <script src="javascript/script.js" defer></script>
+  </head>
+
+  <body>
+    <div id="page-wrapper">
+
+      <header>
+        <div class="site-logo">
+          <h1>Green Haven Co.</h1>
+        </div>
+
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Shop</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="theme-controls">
+          <span>Light</span>
+        
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch between light and dark mode">
+            <span class="toggle-circle"></span>
+          </button>
+        
+          <span>Dark</span>
+        </div>
+
+        <div class="cart-status">
+          <p>Cart: <span id="cart-count">0</span></p>
+        </div>
+      </header>
+
+      <main>
+        <section id="home" class="hero">
+          <div class="hero-content">
+            <p class="eyebrow">Curated home essentials</p>
+        
+            <h2>Quality finds for everyday living</h2>
+        
+            <p>
+              Beautiful, practical home goods thoughtfully chosen to bring comfort,
+              function, and style to your everyday.
+            </p>
+        
+          <a href="#products" class="header-button">Shop Top Picks</a>
+          </div>
+        </section>
+
+        <section id="products" class="shop-section">
+          <div class="section-heading">
+            <h2>Top Picks</h2>
+            <p>Add items to your cart and watch your total update in real time.</p>
+          </div>
+
+          <div class="shop-layout">
+            <div class="product-grid">
+            
+              <article class="product-card">
+                <img src="images/succulent-planter.jpg" alt="White ceramic succulent planter">
+                <h3>Succulent Planter</h3>
+                <p class="price">$18.00</p>
+                <p>Modern ceramic planter perfect for small plants and cozy spaces.</p>
+            
+                <div class="product-actions">
+                  <button type="button" class="add-to-cart" data-name="Succulent Planter" data-price="18">
+                    Add to Cart
+                  </button>
+            
+                  <div class="item-counter hidden" data-name="Succulent Planter">
+                    <button type="button" class="decrease-product">-</button>
+                    <input type="text" class="product-quantity" value="0" readonly>
+                    <button type="button" class="increase-product">+</button>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="product-card">
+                <img src="images/aroma-candle.jpg" alt="Lavender aroma candle in a glass jar">
+                <h3>Aroma Candle</h3>
+                <p class="price">$14.00</p>
+                <p>Relaxing lavender candle designed to refresh your room and your mood.</p>
+            
+                <div class="product-actions">
+                  <button type="button" class="add-to-cart" data-name="Aroma Candle" data-price="14">
+                    Add to Cart
+                  </button>
+            
+                  <div class="item-counter hidden" data-name="Aroma Candle">
+                    <button type="button" class="decrease-product">-</button>
+                    <input type="text" class="product-quantity" value="0" readonly>
+                    <button type="button" class="increase-product">+</button>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="product-card">
+                <img src="images/water-bottle.avif" alt="Stainless steel reusable water bottle">
+                <h3>Water Bottle</h3>
+                <p class="price">$22.00</p>
+                <p>Durable stainless steel bottle that keeps drinks cold for hours.</p>
+            
+                <div class="product-actions">
+                  <button type="button" class="add-to-cart" data-name="Water Bottle" data-price="22">
+                    Add to Cart
+                  </button>
+            
+                  <div class="item-counter hidden" data-name="Water Bottle">
+                    <button type="button" class="decrease-product">-</button>
+                    <input type="text" class="product-quantity" value="0" readonly>
+                    <button type="button" class="increase-product">+</button>
+                  </div>
+                </div>
+              </article>
+            
+              <article class="product-card">
+                <img src="images/tote-bag.avif" alt="Canvas tote bag for everyday use">
+                <h3>Tote Bag</h3>
+                <p class="price">$16.00</p>
+                <p>Simple canvas tote built for errands, books, groceries, and daily use.</p>
+            
+                <div class="product-actions">
+                  <button type="button" class="add-to-cart" data-name="Tote Bag" data-price="16">
+                    Add to Cart
+                  </button>
+            
+                  <div class="item-counter hidden" data-name="Tote Bag">
+                    <button type="button" class="decrease-product">-</button>
+                    <input type="text" class="product-quantity" value="0" readonly>
+                    <button type="button" class="increase-product">+</button>
+                  </div>
+                </div>
+              </article>
+            
+            </div>
+            
+            <aside class="order-summary" aria-label="Order summary">
+              <h2>Your Order</h2>
+            
+              <p>Subtotal: <span id="subtotal">$0.00</span></p>
+              <p>Tax: <span id="tax">$0.00</span></p>
+              <p>Shipping: <span id="shipping">$0.00</span></p>
+            
+              <hr>
+            
+              <p class="total">Total: <span id="total">$0.00</span></p>
+            
+              <button id="checkout-button" type="button">Checkout</button>
+            
+              <p id="cart-message">Add items to your cart before checking out.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+          <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>
+              Have a question about an order, product, or local pickup?
+              Send us a message and we will follow up soon.
+            </p>
+
+            <p>Phone: (555) 123-4567</p>
+            <p>Email: hello@greenhavenco.com</p>
+            <p>Address: 123 Greenway Drive, Portland, OR 97201</p>
+          </div>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="fullName">
+              <span class="error" id="name-error"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+              <span class="error" id="phone-error"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email">
+              <span class="error" id="email-error"></span>
+            </div>
+
+            <fieldset>
+              <legend>Preferred Contact Method</legend>
+
+              <label>
+                <input type="radio" name="contactMethod" value="phone">
+                Contact me by phone
+              </label>
+
+              <label>
+                <input type="radio" name="contactMethod" value="email">
+                Contact me by email
+              </label>
+
+              <span class="error" id="contact-method-error"></span>
+            </fieldset>
+
+            <div class="form-row">
+              <label for="comments">Comments</label>
+              <textarea id="comments" name="comments" rows="5"></textarea>
+              <span class="error" id="comments-error"></span>
+            </div>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+            <div id="form-success" aria-live="polite"></div>
+          </form>
+        </section>
+      </main>
+
+      <footer>
+        <section class="footer-column">
+          <h2>About Green Haven</h2>
+          <p>
+            We offer thoughtfully selected products that bring beauty,
+            comfort, and convenience to everyday life.
+          </p>
+        </section>
+
+        <section class="footer-column">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Shop</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-column">
+          <h2>Customer Care</h2>
+          <ul>
+            <li><a href="#contact">Shipping and Returns</a></li>
+            <li><a href="#contact">FAQ</a></li>
+            <li><a href="#contact">Privacy Policy</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-column">
+          <h2>Newsletter</h2>
+          <p>Get updates on new arrivals and special offers.</p>
+          <form>
+            <label for="newsletter-email">Email Address</label>
+            <input type="email" id="newsletter-email" name="newsletterEmail">
+            <button type="submit">Subscribe</button>
+          </form>
+        </section>
+
+        <p class="copyright">&copy; 2026 Green Haven Co. All rights reserved.</p>
+      </footer>
+
+    </div>
+  </body>
+
+</html>
